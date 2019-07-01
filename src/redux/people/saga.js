@@ -7,7 +7,6 @@ import { GET_PEOPLE_DATA, CHANGE_FILTER_PEOPLE } from "./actionTypes";
 function* getPeoplesSaga() {
   try {
     const filter = yield select(state => state.peoples.filter);
-    console.log(filter.page);
 
     const response = yield call(getPeopleApi, filter.page);
 

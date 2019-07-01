@@ -7,7 +7,7 @@ class Peoples extends Component {
   constructor(props) {
     super(props);
     this.pageSize = 50;
-    this.pagesCount = Math.ceil(120 / this.pageSize);
+    this.pagesCount = Math.ceil(400 / this.pageSize);
 
     this.state = {
       currentPage: 0
@@ -21,14 +21,10 @@ class Peoples extends Component {
     const { peoplesFilter } = this.props;
     peoplesFilter.page = page;
     this.setState({ currentPage: page });
-
-    console.log(peoplesFilter.page);
-
     this.props.changePeopleFilter(peoplesFilter);
   };
   render() {
     const { peoplesData } = this.props;
-    console.log(peoplesData.count);
 
     return (
       <div className="container mt-4">

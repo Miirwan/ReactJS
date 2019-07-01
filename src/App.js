@@ -11,8 +11,6 @@ function App() {
   return (
     <div>
       <NavBar />
-
-      {/* <SideBar /> */}
       <Row>
         <Col lg="3">
           <Infos />
